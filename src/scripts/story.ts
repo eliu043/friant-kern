@@ -109,7 +109,7 @@ try {
  });
  let tileErrors=0;
  map.on('error',()=>{tileErrors++;if(tileErrors>2)$('map-note').textContent='Some map resources failed. Local evidence layers remain available when loaded.';});
- $('explore').addEventListener('click',()=>{exploring=!exploring;$('explore').setAttribute('aria-pressed',String(exploring));$('explore').textContent=exploring?'Exit exploration':'Explore map';if(exploring){map.dragPan.enable();map.doubleClickZoom.enable();map.touchZoomRotate.enable();map.touchZoomRotate.disableRotation();map.keyboard.enable();}else{map.dragPan.disable();map.doubleClickZoom.disable();map.touchZoomRotate.disable();map.keyboard.disable();} });
+ $('explore').addEventListener('click',()=>{exploring=!exploring;$('explore').setAttribute('aria-pressed',String(exploring));$('explore').textContent=exploring?'Back to story':'Pan & zoom';if(exploring){map.dragPan.enable();map.doubleClickZoom.enable();map.touchZoomRotate.enable();map.touchZoomRotate.disableRotation();map.keyboard.enable();}else{map.dragPan.disable();map.doubleClickZoom.disable();map.touchZoomRotate.disable();map.keyboard.disable();} });
  $('reset').addEventListener('click',update);
  $('context').addEventListener('change',e=>map.setLayoutProperty('context','visibility',(e.target as HTMLInputElement).checked?'visible':'none'));
  $('opacity').addEventListener('input',e=>{opacity=Number((e.target as HTMLInputElement).value)/100;if(loaded&&showMovement)map.setPaintProperty('displacement','raster-opacity',opacity);});
