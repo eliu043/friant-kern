@@ -1,0 +1,338 @@
+{
+  "source": "/Users/ericliu/Documents/Codex/2026-11-13/referenced-chatgpt-conversation-this-is-an",
+  "destination": "/Users/ericliu/Documents/GitHub/friant-kern",
+  "files": [
+    {
+      "path": ".github/workflows/deploy.yml",
+      "sha256": "db020beb9676e8a6b624670839b216777467a8c9d85e1c47a5680a85d0635be0"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "8b438f6c819efe228695857c6c94b0ce390f1a9285319e4c252602ddbe067f56"
+    },
+    {
+      "path": ".vscode/extensions.json",
+      "sha256": "3a8ff9062fa0481dc0fc5121417b1313c62386d09f43ae4fb2bc841167343c61"
+    },
+    {
+      "path": ".vscode/launch.json",
+      "sha256": "461accad2f8d7604a8470fb4705b84768bcf24791b0974d49cba0d96c3fea857"
+    },
+    {
+      "path": "CODE_PROVENANCE.md",
+      "sha256": "860fe2bdbae6ade84174b279cab8eeabb22ff995a80ba6af5908f07af79f8815"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a34eff4a3f813b52c255218940a27ba1247bae5259cd0b5641d8e1e96bf7e035"
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "4d2cb761e809901f538363e4936b3e9fbd021ce5c087f4f7efa43de4baa8f47a"
+    },
+    {
+      "path": "astro.config.mjs",
+      "sha256": "e41394f12348ce713701fca6128d48b642ae4469ef1a15e7afd8565a4f421739"
+    },
+    {
+      "path": "dist/_astro/index.8qRUISz9.css",
+      "sha256": "05796e8317b3fa6019379ee8ea5169e2d0687698ca12949fbfe49668b3486c7e"
+    },
+    {
+      "path": "dist/_astro/index.astro_astro_type_script_index_0_lang.BrTH69hK.js",
+      "sha256": "ef692cf78a272b952d1d5ce7efb69876ee9f303042d6747af6a606aa15194077"
+    },
+    {
+      "path": "dist/_astro/index.kfcfMc2O.css",
+      "sha256": "864937793004db5712c93847a17b8b4a415762cd3674a271cbe0927125aa8786"
+    },
+    {
+      "path": "dist/_astro/maplibre-gl-worker-Br3j0JGE.js",
+      "sha256": "8f1d61da119b6435280520b6e81896d47858d83e2af76b2288015425550d8dc4"
+    },
+    {
+      "path": "dist/claim-evidence.csv",
+      "sha256": "a98da698b7b53f1f7ff8bb2ae187e9fc3e74087d8f330f7a667a8768bcc27a6a"
+    },
+    {
+      "path": "dist/data/canal.geojson",
+      "sha256": "3c232d755526715166e93557281b3db9aa24deaa61efaad8e8e4951e39a68788"
+    },
+    {
+      "path": "dist/data/displacement.png",
+      "sha256": "e67fae9fd0c8820f62b20c74c60cef70ec01195e3b1a6d45d4b0c118d10e43da"
+    },
+    {
+      "path": "dist/data/raster-meta.json",
+      "sha256": "d46d6ca6bc042dcc5710da42d9f1065bcb39ec0749fa1004307e6293692d7990"
+    },
+    {
+      "path": "dist/data/samples.geojson",
+      "sha256": "07b5160d78171d59d51c63f4482dd7ca7a5fb2183e280d828659742def534941"
+    },
+    {
+      "path": "dist/fonts/MonaSans-Light.woff2",
+      "sha256": "c04133bea79100610fb8a8e38a0d102b8108e367238dba14358d025e1596f23f"
+    },
+    {
+      "path": "dist/fonts/MonaSans-Regular.woff2",
+      "sha256": "63f2c92886eb6c00493e24fa11e1516043a1600d88d886b1ed70b171a8847a33"
+    },
+    {
+      "path": "dist/fonts/MonaSans-SemiBold.woff2",
+      "sha256": "f498ae30ba4faa131fb95f331f8e784882c4bfee901f8e7f0182455a4f4b4885"
+    },
+    {
+      "path": "dist/fonts/atkinson-bold.woff",
+      "sha256": "f0de8ccb0af6e50fd1b51d50d5032c6824adc0f1b435345919fca1d9b72b3623"
+    },
+    {
+      "path": "dist/fonts/atkinson-regular.woff",
+      "sha256": "b51d2e16226a56e304ab9ba67d22f504afc5bdceab1caefe386063a26ee4bc0b"
+    },
+    {
+      "path": "dist/img/fisk02.jpg",
+      "sha256": "7b1c2e6be744720b895b5cb5fd148ec35c46ebe60e6a14ff4e159405030ee6c2"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "518bf88641d63e55140dcfe9b563dbe9dc2c4dc7faa92a9283e302ab5b02ba9a"
+    },
+    {
+      "path": "dist/report.md",
+      "sha256": "90c337a30e674d1e6eb1d019b28b8b247b8d84f932f2082193b2106eec76e3a8"
+    },
+    {
+      "path": "eslint.config.js",
+      "sha256": "3d1666811b186052b4ffb9a0285fc4ea4e63c455136aee8ae145ec5779948514"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "2f1710f9f49149ad97aea3c716660b4b0d0ee0c2dbd8924806fb0911a6ec8a4f"
+    },
+    {
+      "path": "package.json",
+      "sha256": "72e1db7efe2faff9b1065410ed3d1498c027494a5c02c13f9435531ad039cea3"
+    },
+    {
+      "path": "public/claim-evidence.csv",
+      "sha256": "a98da698b7b53f1f7ff8bb2ae187e9fc3e74087d8f330f7a667a8768bcc27a6a"
+    },
+    {
+      "path": "public/data/canal.geojson",
+      "sha256": "3c232d755526715166e93557281b3db9aa24deaa61efaad8e8e4951e39a68788"
+    },
+    {
+      "path": "public/data/displacement.png",
+      "sha256": "e67fae9fd0c8820f62b20c74c60cef70ec01195e3b1a6d45d4b0c118d10e43da"
+    },
+    {
+      "path": "public/data/raster-meta.json",
+      "sha256": "d46d6ca6bc042dcc5710da42d9f1065bcb39ec0749fa1004307e6293692d7990"
+    },
+    {
+      "path": "public/data/samples.geojson",
+      "sha256": "07b5160d78171d59d51c63f4482dd7ca7a5fb2183e280d828659742def534941"
+    },
+    {
+      "path": "public/fonts/MonaSans-Light.woff2",
+      "sha256": "c04133bea79100610fb8a8e38a0d102b8108e367238dba14358d025e1596f23f"
+    },
+    {
+      "path": "public/fonts/MonaSans-Regular.woff2",
+      "sha256": "63f2c92886eb6c00493e24fa11e1516043a1600d88d886b1ed70b171a8847a33"
+    },
+    {
+      "path": "public/fonts/MonaSans-SemiBold.woff2",
+      "sha256": "f498ae30ba4faa131fb95f331f8e784882c4bfee901f8e7f0182455a4f4b4885"
+    },
+    {
+      "path": "public/fonts/atkinson-bold.woff",
+      "sha256": "f0de8ccb0af6e50fd1b51d50d5032c6824adc0f1b435345919fca1d9b72b3623"
+    },
+    {
+      "path": "public/fonts/atkinson-regular.woff",
+      "sha256": "b51d2e16226a56e304ab9ba67d22f504afc5bdceab1caefe386063a26ee4bc0b"
+    },
+    {
+      "path": "public/img/fisk02.jpg",
+      "sha256": "7b1c2e6be744720b895b5cb5fd148ec35c46ebe60e6a14ff4e159405030ee6c2"
+    },
+    {
+      "path": "public/report.md",
+      "sha256": "90c337a30e674d1e6eb1d019b28b8b247b8d84f932f2082193b2106eec76e3a8"
+    },
+    {
+      "path": "research/CLAIM_EVIDENCE.csv",
+      "sha256": "a98da698b7b53f1f7ff8bb2ae187e9fc3e74087d8f330f7a667a8768bcc27a6a"
+    },
+    {
+      "path": "research/DATA_AUDIT.md",
+      "sha256": "afef52c0aa65aed1ddd0965614cafe329e6abc79febb5b2628ceb874ee26546e"
+    },
+    {
+      "path": "research/FINDINGS.md",
+      "sha256": "90c337a30e674d1e6eb1d019b28b8b247b8d84f932f2082193b2106eec76e3a8"
+    },
+    {
+      "path": "research/STORYBOARD.md",
+      "sha256": "b74e83f9885092feaad9074b873a21cb63b6b765c452fd2f4476c87435a53fbd"
+    },
+    {
+      "path": "research/TEMPLATE-README.md",
+      "sha256": "08be1f4894015ae765362fc49e8959d2d056c71b8085e59865d9ab93b3b2e023"
+    },
+    {
+      "path": "research/checksums.json",
+      "sha256": "7d946209ca71120329c369e9e7868945690601547df41897d73724cbda89db9c"
+    },
+    {
+      "path": "research/irrigation-audit.json",
+      "sha256": "c2bd62af1c4fa7c0fb5790c12860a6d6b751a68e99922593cec63250017d8a4a"
+    },
+    {
+      "path": "research/irrigation-mask-check.json",
+      "sha256": "8262d6938062bc9d81514085d0cf9c11411974af4ef1795f528d5ee527e8c02f"
+    },
+    {
+      "path": "research/raw/canal-layer.json",
+      "sha256": "cacd60e3cb3ede303d6251f645ba1930935e077d60dec36fa31183a3b42f4e16"
+    },
+    {
+      "path": "research/raw/canal.geojson",
+      "sha256": "3c232d755526715166e93557281b3db9aa24deaa61efaad8e8e4951e39a68788"
+    },
+    {
+      "path": "research/raw/canal2-item.json",
+      "sha256": "c3578e0bda4f0e690eda1ecc15c39c86f0732b5a7b617541ca415b6595842389"
+    },
+    {
+      "path": "research/raw/displacement-2024.tif",
+      "sha256": "ed4f2f6ba4f9d5aad836fb914adaca31335b7e78dda44039063ea62b5581ca61"
+    },
+    {
+      "path": "research/raw/displacement-service.json",
+      "sha256": "56b3e40477031586b4bef1607e0a0a01b4057642c62e1a19958d4ddf6ebebd02"
+    },
+    {
+      "path": "research/raw/dwr.json",
+      "sha256": "9a68e07928b749adaa9f638e9c002c25182c19c568f0aba4146ef0f0b9119593"
+    },
+    {
+      "path": "research/raw/irrigation-2021.tif",
+      "sha256": "d8d316c76c7a2cc185f78fb20646bbafecd6590535f82df28873714d0bdceb77"
+    },
+    {
+      "path": "research/raw/irrigation-2024.tif",
+      "sha256": "e4930a36ffac3fc3b28bbff662141e19fc9c1be7c3100e4b284a691d1e5d3ea2"
+    },
+    {
+      "path": "research/raw/zenodo.json",
+      "sha256": "7557d1cd35dfc26358230a4cbda42c00877514d678ddc445cf9e388762759100"
+    },
+    {
+      "path": "scripts/audit_irrigation.py",
+      "sha256": "ff29edbac53b9851e1f42da4db74c97a9c5b8b94b6c74137f958c1e16a7d0db5"
+    },
+    {
+      "path": "scripts/prepare_data.py",
+      "sha256": "bee729f2a950155dd73d4597d2825f6a0f24337b40f4460354a8c31ce78faef8"
+    },
+    {
+      "path": "src/assets/img/fisk02.jpg",
+      "sha256": "6230b8e9d43b92c60c70e29efc3bff812626d764ffa71b7925226abb93c78d8f"
+    },
+    {
+      "path": "src/components/BackToPrev.astro",
+      "sha256": "3589b1f999fbe3881d1194c5e23d0b0c9ec7538d50c1e12be157e6f71c8d761e"
+    },
+    {
+      "path": "src/components/BackToTop.astro",
+      "sha256": "2d52d8ff380ea7e9448ceadb039ee429eb376bf457f5178003c69811b49def20"
+    },
+    {
+      "path": "src/components/Container.astro",
+      "sha256": "254275423bb281cffc38ddf328ffdeb2af90d6001722fdb145627d157bd2e5fe"
+    },
+    {
+      "path": "src/components/Footer.astro",
+      "sha256": "31155cfb3bb8fdd1cc6f185d7ea9dfb8b83740699d5fcf77c113652b24f37bb8"
+    },
+    {
+      "path": "src/components/FormattedDate.astro",
+      "sha256": "1cb6c1327e27d62530a43c76abd11578ae14f598b2146e6d4470321110ed3799"
+    },
+    {
+      "path": "src/components/Head.astro",
+      "sha256": "6482cc45c8855c2ec07046730814e3f571130b2ff870ea46c67bf556a1f695f6"
+    },
+    {
+      "path": "src/components/Header.astro",
+      "sha256": "cf1e5750a3cf43d82998d4dfed85ef7b0215be1480faaeb2ee882f2cc908ef08"
+    },
+    {
+      "path": "src/components/Link.astro",
+      "sha256": "c313911f89b118b6d1c33ba144f206dc290c42bc219bfeaca858b73f8dbbf178"
+    },
+    {
+      "path": "src/consts.ts",
+      "sha256": "20eafeb04473f749e32804121d2660922f836800b083ff6fb75371c4642d7d66"
+    },
+    {
+      "path": "src/layouts/PageLayout.astro",
+      "sha256": "42c7c6e0e338e8daad6a5b37ff23fb29a289fd786823f6f1b6a804c76601c10e"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "sha256": "1989727c870621641163b2981038743bd6a26d4310c741e31dd6a14256bbb465"
+    },
+    {
+      "path": "src/maps/bike-lanes.yaml",
+      "sha256": "b501190f536304594d2ed8a9b82b1d55634c86e6cb6adeff1a648d0dedb4a0a7"
+    },
+    {
+      "path": "src/maps/full-page.yaml",
+      "sha256": "90f527c7ad123e103c3e15d901a95f18ed57c88c8bb27bf9b00afe831e5bf848"
+    },
+    {
+      "path": "src/maps/layers.yaml",
+      "sha256": "3c405bd3d21a450d443d80d641d85f75ac0fb65cd3ddf6f46f9ca1ed7e9b1414"
+    },
+    {
+      "path": "src/maps/squirrels.yaml",
+      "sha256": "4dc57ee76fb4d795dc91f481cc67d864d6e1699cabbe81b2c4a3e717752cda88"
+    },
+    {
+      "path": "src/maps/static.yaml",
+      "sha256": "c7d331b202234bbb5e0c3c2696026771740915809c007e10704187b5980d8a3b"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "sha256": "8f08cdf36c5328fe11589461c1c7e4fd158b35a1789a73a5d172901e52dbfb59"
+    },
+    {
+      "path": "src/scripts/story.ts",
+      "sha256": "af9269c5f098f283363f495c4299b0cbf61a7223c323e6ac9a0a63d49c9afa47"
+    },
+    {
+      "path": "src/stories/nyc.yaml",
+      "sha256": "c50ff1876b8ec11a0f59ab55304aa17f6db8da44fb056aa760bcbcb98bfee3fa"
+    },
+    {
+      "path": "src/styles/global.css",
+      "sha256": "a5e6c794f99a1745273dece9ec79196cecd1571c269476da0944d85b82a6468a"
+    },
+    {
+      "path": "src/styles/narrative.css",
+      "sha256": "2e1f1219c154484a93e7241e63ea785a37b1cb664e1f3254f0822369a9a0be39"
+    },
+    {
+      "path": "src/types.ts",
+      "sha256": "146c6965794c6e09c2aa227d5cbafe2464370e20c84d8c63f63d02d2ef408445"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "09dfec717540ad64018f4af6c5f9d180f03c3987fb81938659efc6876eb0a0d0"
+    }
+  ]
+}

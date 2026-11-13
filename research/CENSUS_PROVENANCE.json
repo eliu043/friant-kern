@@ -1,0 +1,20 @@
+{
+  "population_source": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/cities/totals/sub-est2025_6.csv",
+  "position_source": "https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2020_Gazetteer/2020_Gaz_place_national.zip",
+  "retrieved": "2026-11-13",
+  "population_field": "POPESTIMATE2025",
+  "date": "2025-07-01",
+  "selection": "SUMLEV 162 incorporated places with 2020 Gazetteer reference point inside [-120.1,35.2,-118.6,37.15]; GEOID join",
+  "feature_count": 28,
+  "limitations": "2025 city population estimates positioned at 2020 reference points; no city boundaries, CDPs, rural households, water-service membership, or exposed-population totals implied. Not co-temporal with 2015\u2013Jan2024 displacement.",
+  "files": [
+    {
+      "file": "sub-est2025_6.csv",
+      "sha256": "699d9213e16a353c820898519aa8e23a8220b4f91d07af08361ebf340b13af38"
+    },
+    {
+      "file": "2020_Gaz_place_national.zip",
+      "sha256": "6e5745b3e1adf7a1e024a988301d484697e2a0f25b3cf10114eef676f09d5c18"
+    }
+  ]
+}

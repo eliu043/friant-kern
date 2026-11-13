@@ -1,0 +1,47 @@
+[
+  {
+    "file": "canal-layer.json",
+    "bytes": 12281,
+    "sha256": "cacd60e3cb3ede303d6251f645ba1930935e077d60dec36fa31183a3b42f4e16"
+  },
+  {
+    "file": "canal.geojson",
+    "bytes": 132786,
+    "sha256": "3c232d755526715166e93557281b3db9aa24deaa61efaad8e8e4951e39a68788"
+  },
+  {
+    "file": "canal2-item.json",
+    "bytes": 1999,
+    "sha256": "c3578e0bda4f0e690eda1ecc15c39c86f0732b5a7b617541ca415b6595842389"
+  },
+  {
+    "file": "displacement-2024.tif",
+    "bytes": 7079992,
+    "sha256": "ed4f2f6ba4f9d5aad836fb914adaca31335b7e78dda44039063ea62b5581ca61"
+  },
+  {
+    "file": "displacement-service.json",
+    "bytes": 5295,
+    "sha256": "56b3e40477031586b4bef1607e0a0a01b4057642c62e1a19958d4ddf6ebebd02"
+  },
+  {
+    "file": "dwr.json",
+    "bytes": 32099,
+    "sha256": "9a68e07928b749adaa9f638e9c002c25182c19c568f0aba4146ef0f0b9119593"
+  },
+  {
+    "file": "irrigation-2021.tif",
+    "bytes": 13283185,
+    "sha256": "d8d316c76c7a2cc185f78fb20646bbafecd6590535f82df28873714d0bdceb77"
+  },
+  {
+    "file": "irrigation-2024.tif",
+    "bytes": 2863410,
+    "sha256": "e4930a36ffac3fc3b28bbff662141e19fc9c1be7c3100e4b284a691d1e5d3ea2"
+  },
+  {
+    "file": "zenodo.json",
+    "bytes": 9031,
+    "sha256": "7557d1cd35dfc26358230a4cbda42c00877514d678ddc445cf9e388762759100"
+  }
+]

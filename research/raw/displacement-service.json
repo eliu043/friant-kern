@@ -1,0 +1,129 @@
+{
+ "currentVersion": 11.3,
+ "serviceDescription": "This raster represents measurements of vertical ground surface displacement in more than 200 of the high-use and populated groundwater basins across the State of California between June of 2015 and January of 2024. Image resolution (X,Y) is 0.0011335842, 0.00089982004 degrees, or approximately 100 meters. Vertical ground surface displacement estimates are derived from Interferometric Synthetic Aperture Radar (InSAR) data that are collected by the European Space Agency (ESA) Sentinel-1A satellite and processed by TRE ALTAMIRA, under contract with to the California Department of Water Resources (DWR) as part of DWR\u2019s SGMA technical assistance to provide important SGMA-relevant data to GSAs for GSP development and implementation. Sentinel-1A InSAR data coverage for the entire study area began in June 13, 2015. The Department of Water Resources makes no warranties, representations or guarantees, either expressed or implied, as to the accuracy, completeness, correctness, or timeliness of the information in this dataset, nor accepts or assumes any liability arising from use of these data. Neither the Department nor any of the sources of this information shall be responsible for any errors or omissions, or for the use or results obtained from the use of this information. A Groundwater Sustainability Agency is not required to use these data, and their use does not guarantee the adequacy of a Groundwater Sustainability Plan that relies on such data. This is an official DWR Image Service, published 6/2024 by Nate Cheshier of the DWR Geomatics Office, who may be contacted at Nathan.cheshier@water.ca.gov or (916) 603-6576. Date of acquisition: Between January of 2015 and April 2024. Date of production: 4/2024. Date of delivery of product: Delivered from TRE ALTAMIRA to DWR in June of 2024. Processing steps: See Technical Report: InSAR land surveying and mapping services to DWR supporting SGMA \u2013 April 2024 Update, TRE ALTAMIRA, 2024. Pixel value definitions: Vertical ground surface displacement in feet for time period specified above. Positional accuracy: See: InSAR Data Accuracy for California Groundwater Basins - CPGS Data Comparative Analysis - January 2015 to October 2020, Towill Inc., 2021. ",
+ "name": "SAR/Vertical_Displacement_TRE_ALTAMIRA_Total_Since_20150613_20240101",
+ "description": "",
+ "extent": {
+  "xmin": -124.4223368919088,
+  "ymin": 32.31752728112403,
+  "xmax": -115.40694204863348,
+  "ymax": 42.25513975862853,
+  "spatialReference": {
+   "wkid": 4326,
+   "latestWkid": 4326
+  }
+ },
+ "initialExtent": {
+  "xmin": -124.4223368919088,
+  "ymin": 32.31752728112403,
+  "xmax": -115.40694204863348,
+  "ymax": 42.25513975862853,
+  "spatialReference": {
+   "wkid": 4326,
+   "latestWkid": 4326
+  }
+ },
+ "fullExtent": {
+  "xmin": -124.4223368919088,
+  "ymin": 32.31752728112403,
+  "xmax": -115.40694204863348,
+  "ymax": 42.25513975862853,
+  "spatialReference": {
+   "wkid": 4326,
+   "latestWkid": 4326
+  }
+ },
+ "sortableFields": "MinPS,MaxPS,LowPS,HighPS,CenterX,CenterY,ZOrder,Shape_Length,Shape_Area",
+ "bandCount": 1,
+ "pixelType": "F32",
+ "minValues": [
+  -7.065515995025635
+ ],
+ "maxValues": [
+  1.5612493753433228
+ ],
+ "meanValues": [
+  -0.21024193578911762
+ ],
+ "stdvValues": [
+  0.7518753993331855
+ ],
+ "hasMultidimensions": false,
+ "pixelSizeX": 0.001133584162363299,
+ "pixelSizeY": 8.998200359928017E-4,
+ "meanPixelSize": 113.17875996895287,
+ "datasetFormat": "FGDBR",
+ "uncompressedSize": 351331728,
+ "blockWidth": 128,
+ "blockHeight": 128,
+ "compressionType": "LZ77",
+ "bandNames": [
+  "Band_1"
+ ],
+ "allowCopy": true,
+ "allowAnalysis": true,
+ "itemAccess": false,
+ "inspectionCapabilities": "",
+ "minPixelSize": 0,
+ "maxPixelSize": 0,
+ "copyrightText": "California Department of Water Resources",
+ "serviceDataType": "esriImageServiceDataTypeGeneric",
+ "serviceSourceType": "esriImageServiceSourceTypeDataset",
+ "objectIdField": "",
+ "fields": [],
+ "capabilities": "Mensuration,Image,Metadata",
+ "defaultMosaicMethod": "Center",
+ "allowedMosaicMethods": "",
+ "sortField": "",
+ "sortValue": null,
+ "sortAscending": true,
+ "mosaicOperator": "First",
+ "defaultCompressionQuality": 75,
+ "defaultResamplingMethod": "Bilinear",
+ "maxImageHeight": 4100,
+ "maxImageWidth": 15000,
+ "allowRasterFunction": true,
+ "rasterFunctionInfos": [
+  {
+   "name": "Vertical_Displacement_Total_2025",
+   "description": "A raster function template.",
+   "help": ""
+  },
+  {
+   "name": "None",
+   "description": "",
+   "help": ""
+  }
+ ],
+ "rasterTypeInfos": [
+  {
+   "name": "Raster Dataset",
+   "description": "Supports all ArcGIS Raster Datasets",
+   "help": ""
+  }
+ ],
+ "mensurationCapabilities": "Basic",
+ "hasHistograms": true,
+ "hasColormap": false,
+ "hasRasterAttributeTable": false,
+ "minScale": 0,
+ "maxScale": 0,
+ "exportTilesAllowed": false,
+ "supportsStatistics": false,
+ "supportsAdvancedQueries": false,
+ "editFieldsInfo": null,
+ "ownershipBasedAccessControlForRasters": null,
+ "allowComputeTiePoints": false,
+ "useStandardizedQueries": true,
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": false,
+  "supportsOrderBy": false,
+  "supportsDistinct": false,
+  "supportsPagination": false
+ },
+ "spatialReference": {
+  "wkid": 4326,
+  "latestWkid": 4326
+ }
+}

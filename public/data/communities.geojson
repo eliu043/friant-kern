@@ -1,0 +1,453 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0603526",
+        "name": "Bakersfield",
+        "population": 422165,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.036921,
+          35.353593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0614218",
+        "name": "Clovis",
+        "population": 129347,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.684922,
+          36.828967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0616224",
+        "name": "Corcoran",
+        "population": 22358,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.561268,
+          36.084057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0618394",
+        "name": "Delano",
+        "population": 52334,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.264221,
+          35.76643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0619318",
+        "name": "Dinuba",
+        "population": 25949,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.3987,
+          36.545325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0623126",
+        "name": "Exeter",
+        "population": 10122,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.145954,
+          36.294073
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0623616",
+        "name": "Farmersville",
+        "population": 10326,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.208304,
+          36.305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0625436",
+        "name": "Fowler",
+        "population": 7745,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.673743,
+          36.624377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0627000",
+        "name": "Fresno",
+        "population": 555549,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.793359,
+          36.782684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0631960",
+        "name": "Hanford",
+        "population": 62229,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.654886,
+          36.327418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0636084",
+        "name": "Huron",
+        "population": 7394,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.09619,
+          36.204032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0638226",
+        "name": "Kerman",
+        "population": 17553,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.062429,
+          36.724857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0638562",
+        "name": "Kingsburg",
+        "population": 13249,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.566565,
+          36.525193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0641152",
+        "name": "Lemoore",
+        "population": 27291,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.798333,
+          36.294922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0641712",
+        "name": "Lindsay",
+        "population": 12578,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.089703,
+          36.208192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0645022",
+        "name": "Madera",
+        "population": 69017,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.077824,
+          36.962988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0644826",
+        "name": "McFarland",
+        "population": 14709,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.232729,
+          35.670564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0654008",
+        "name": "Orange Cove",
+        "population": 9811,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.31875,
+          36.621145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0655856",
+        "name": "Parlier",
+        "population": 14622,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.543367,
+          36.608693
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0658240",
+        "name": "Porterville",
+        "population": 63088,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.0336,
+          36.063542
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0660242",
+        "name": "Reedley",
+        "population": 26982,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.446687,
+          36.598364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0667056",
+        "name": "Sanger",
+        "population": 27228,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.557483,
+          36.698967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0670882",
+        "name": "Selma",
+        "population": 24702,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.614268,
+          36.571548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0671106",
+        "name": "Shafter",
+        "population": 23871,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.201285,
+          35.479421
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0680644",
+        "name": "Tulare",
+        "population": 73907,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.341921,
+          36.199366
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0682954",
+        "name": "Visalia",
+        "population": 146541,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.328519,
+          36.32803
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0683542",
+        "name": "Wasco",
+        "population": 26525,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.367101,
+          35.593785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "geoid": "0686300",
+        "name": "Woodlake",
+        "population": 8073,
+        "date": "2025-07-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.09953,
+          36.412825
+        ]
+      }
+    }
+  ]
+}

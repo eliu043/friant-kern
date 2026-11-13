@@ -1,0 +1,16 @@
+[
+  {
+    "file": "public/images/canal-tulare.jpg",
+    "sha256": "ed04de1689976b605ac48a5e6fab483afe14b856be178b5812ee8cc261d5a13c",
+    "source_page": "https://www.usbr.gov/newsroom/news-release/4410?field_story=1",
+    "image_url": "https://www.usbr.gov/newsroom/newsroom/newsroom/inline-images/FKC%201.JPG",
+    "credit": "Bureau of Reclamation, construction account published 23 January 2023; capture date unspecified"
+  },
+  {
+    "file": "public/images/canal-replacement.jpg",
+    "sha256": "21575a3ca06daa71af5aa75b190bb772165e53a6f1626d91302772f503534c84",
+    "source_page": "https://www.usbr.gov/newsroom/news-release/4410?field_story=1",
+    "image_url": "https://www.usbr.gov/newsroom/newsroom/newsroom/inline-images/FKC%202.jpg",
+    "credit": "Bureau of Reclamation, construction account published 23 January 2023; capture date unspecified"
+  }
+]

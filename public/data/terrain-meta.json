@@ -1,0 +1,54 @@
+{
+  "source": "USGS 3DEP Bare Earth DEM Dynamic Service",
+  "retrieved": "2026-11-13",
+  "service_snapshot": "2026-10-26",
+  "acquisition_date": "Mixed source dates; snapshot and retrieval are not acquisition dates",
+  "bounds": [
+    -120.39999999999999,
+    34.99540420677991,
+    -118.19999999999997,
+    37.30446268862684
+  ],
+  "coordinates": [
+    [
+      -120.39999999999999,
+      37.30446268862684
+    ],
+    [
+      -118.19999999999997,
+      37.30446268862684
+    ],
+    [
+      -118.19999999999997,
+      34.99540420677991
+    ],
+    [
+      -120.39999999999999,
+      34.99540420677991
+    ]
+  ],
+  "export_resolution_3857_m": [
+    244.90287974520214,
+    244.90287974520228
+  ],
+  "approx_ground_resolution_at_36_2_m": 197.6269042841043,
+  "units": "meters",
+  "minimum_m": 41.36418151855469,
+  "maximum_m": 4350.95068359375,
+  "tiles": {
+    "minzoom": 6,
+    "maxzoom": 10,
+    "size": 256,
+    "encoding": "terrarium",
+    "count": 93
+  },
+  "exaggeration": 2,
+  "section": {
+    "latitude": 36.2,
+    "canal_longitude": -119.0593910777367,
+    "length_km": 152.88835389661375
+  },
+  "request_url": "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage?bbox=-120.4,35,-118.2,37.3&bboxSR=4326&imageSR=3857&size=1000,1300&format=tiff&pixelType=F32&f=json",
+  "raw_sha256": "f44a6745ea955e74f9061a9c0c16326cd2a68fae716f710964a3bb266413b490",
+  "limitations": "Regional resampled terrain. No fine canal geometry, water-surface height, freeboard, bed slope, dated terrain-change measurement, or repair performance implied. Export cells about 198 m on ground at section latitude; tiles may oversample. Edge tiles use 0 outside bounded export; map views constrained away from edges."
+}

@@ -1,0 +1,72 @@
+{
+  "id": "6bfb1ecacc2f4a01927f8d9468e342e2",
+  "owner": "jthomas@ppeng.com",
+  "ownerId": "dcfa7b1af6574c6eb395cc4f918d6ccd",
+  "created": 1692656205000,
+  "modified": 1692656222000,
+  "guid": null,
+  "name": null,
+  "title": "Friant_Kern_Canal",
+  "type": "Feature Service",
+  "typeKeywords": [
+    "ArcGIS Server",
+    "Data",
+    "Feature Access",
+    "Feature Service",
+    "Metadata",
+    "Service",
+    "Singlelayer",
+    "Hosted Service"
+  ],
+  "description": "Federal Canal system center lines in California and around Klamath, Oregon captured from 1:24,000-scale USGS topographic maps. Updates and modifications made using USGS DOQQs.",
+  "tags": [
+    "conveyance",
+    "eastside",
+    "CVP",
+    "BoR",
+    "Friant"
+  ],
+  "snippet": "This database is used for display and analysis purposes. It is not intended to be used as a land survey or representation of land for conveyance or tax purposes. The database is available to all users that may require this information.",
+  "thumbnail": "thumbnail/ago_downloaded.png",
+  "documentation": null,
+  "extent": [
+    [
+      -119.77236640045831,
+      35.367536207163845
+    ],
+    [
+      -119.00573264155108,
+      36.99800756103698
+    ]
+  ],
+  "categories": [],
+  "spatialReference": "102100",
+  "accessInformation": null,
+  "classification": null,
+  "licenseInfo": null,
+  "culture": "en-us",
+  "properties": null,
+  "advancedSettings": null,
+  "url": "https://services6.arcgis.com/osFtgUUq38t5BVQt/arcgis/rest/services/Friant_Kern_Canal/FeatureServer",
+  "proxyFilter": null,
+  "access": "public",
+  "size": 131072,
+  "subInfo": 0,
+  "appCategories": [],
+  "industries": [],
+  "languages": [],
+  "largeThumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "listed": false,
+  "commentsEnabled": true,
+  "numComments": 0,
+  "numRatings": 0,
+  "avgRating": 0,
+  "numViews": 1535,
+  "scoreCompleteness": 76,
+  "groupDesignations": null,
+  "apiToken1ExpirationDate": -1,
+  "apiToken2ExpirationDate": -1,
+  "lastViewed": 1794574800000
+}
