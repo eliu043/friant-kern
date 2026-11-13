@@ -8,6 +8,7 @@ import canal from '../../public/data/canal.geojson?raw';
 import communities from '../../public/data/communities.geojson?raw';
 import terrainMeta from '../../public/data/terrain-meta.json';
 import section from '../../public/data/terrain-section.json';
+const baseUrl=import.meta.env.BASE_URL.replace(/\/$/,'')+'/';
 const $ = (id:string) => document.getElementById(id)!;
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 // Every chapter selects complete, reversible evidence states, not just a camera.
@@ -17,8 +18,8 @@ const views = [
  {center:[-119.10,35.95],zoom:9.5}, {center:[-119.10,35.95],zoom:9.5},
  {center:[-119.38,36.22],zoom:7.7}
 ];
-const stages=['01 / The route','02 / The terrain','03 / The moving ground','04 / Three regional readings','05 / The bottleneck','06 / The repair','07 / Below the surface'];
-const notes=['Friant Dam → Kern River','A — A′ · terrain section at 36.2° N','Cumulative vertical movement · 2015–Jan 2024','Select a dot to read a regional raster cell','Regional displacement · not a capacity model','Reference alignment · repair boundaries not mapped','Conveyance and aquifer storage are different questions'];
+const stages=['01 / The route','02 / The terrain','03 / The moving ground','04 / Three regional readings','05 / The bottleneck','06 / The repair','07 / Aquifer storage'];
+const notes=['Friant Dam → Kern River','A — A′ · terrain section at 36.2° N','Cumulative vertical movement · 2015–Jan 2024','Select a dot to read a regional raster cell','Regional displacement · not a capacity model','Reference alignment · repair boundaries not mapped','USGS · aquifer-system compaction'];
 let active=0,loaded=false,exploring=false,opacity=.85;
 let lastMobile=window.innerWidth<=760;
 let showPeople=false,showMovement=false,showTerrain=false;
@@ -62,11 +63,11 @@ try {
   map.easeTo({...views[active],center:views[active].center as [number,number],pitch:showTerrain?48:0,duration:reduced?0:1050});
  }
  map.on('load',()=>{
-  map.addSource('terrain-dem',{type:'raster-dem',tiles:[`${location.origin}${import.meta.env.BASE_URL}data/terrain/{z}/{x}/{y}.png`],tileSize:256,minzoom:6,maxzoom:10,bounds:terrainMeta.bounds as [number,number,number,number],encoding:'terrarium',attribution:'Terrain: USGS 3DEP'});
-  map.addSource('terrain-color',{type:'image',url:`${import.meta.env.BASE_URL}data/elevation-tint.png`,coordinates:terrainMeta.coordinates as [[number,number],[number,number],[number,number],[number,number]]});
+  map.addSource('terrain-dem',{type:'raster-dem',tiles:[`${location.origin}${baseUrl}data/terrain/{z}/{x}/{y}.png`],tileSize:256,minzoom:6,maxzoom:10,bounds:terrainMeta.bounds as [number,number,number,number],encoding:'terrarium',attribution:'Terrain: USGS 3DEP'});
+  map.addSource('terrain-color',{type:'image',url:`${baseUrl}data/elevation-tint.png`,coordinates:terrainMeta.coordinates as [[number,number],[number,number],[number,number],[number,number]]});
   map.addLayer({id:'terrain-tint',type:'raster',source:'terrain-color',paint:{'raster-opacity':.72,'raster-fade-duration':0}},'context');
   map.addLayer({id:'terrain-shade',type:'hillshade',source:'terrain-dem',paint:{'hillshade-exaggeration':.42,'hillshade-shadow-color':'#465847','hillshade-highlight-color':'#fffbef','hillshade-accent-color':'#69735e'}},'context');
-  map.addSource('displacement',{type:'image',url:`${import.meta.env.BASE_URL}data/displacement.png`,coordinates:meta.coordinates as [[number,number],[number,number],[number,number],[number,number]]});
+  map.addSource('displacement',{type:'image',url:`${baseUrl}data/displacement.png`,coordinates:meta.coordinates as [[number,number],[number,number],[number,number],[number,number]]});
   map.addLayer({id:'displacement',type:'raster',source:'displacement',paint:{'raster-opacity':0,'raster-opacity-transition':{duration:reduced?0:700,delay:0},'raster-fade-duration':0,'raster-resampling':'nearest'}});
   map.addSource('communities',{type:'geojson',data:JSON.parse(communities),attribution:'Population: US Census Bureau'});
   map.addLayer({id:'communities',type:'circle',source:'communities',layout:{visibility:'none'},paint:{'circle-radius':['*',['sqrt',['get','population']],window.innerWidth<=760?.05059644:.06324555],'circle-color':'#326d8a','circle-opacity':.23,'circle-stroke-color':'#326d8a','circle-stroke-width':1.2}});
@@ -139,7 +140,7 @@ try {
  // Reveal text on entry, once; map states follow chapter boundaries independently.
  if(!reduced){
   const reveal=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-revealed');reveal.unobserve(entry.target);}}),{threshold:.08});
-  document.querySelectorAll('.chapter-inner,.hero-facts,.opening-photo').forEach(el=>{el.classList.add('will-reveal');reveal.observe(el);});
+  document.querySelectorAll('.chapter-inner').forEach(el=>{el.classList.add('will-reveal');reveal.observe(el);});
  }
  function openSource(){
   if(location.hash.startsWith('#source-'))($('source-notes') as HTMLDetailsElement).open=true;

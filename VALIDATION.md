@@ -19,3 +19,7 @@ See `research/REVISION.md` for the seven-chapter revision, new Census layer, sou
 ## Terrain and editorial structure pass
 
 Current validation and section-by-section rationale are in `research/SECTION_REVIEW.md`. USGS source/processing metadata is in `research/TERRAIN_PROVENANCE.json`. The conceptual section and main population chapter have been removed; the design allowance now appears with repair.
+
+## Copy and design review
+
+See `research/COPY_DESIGN_REVIEW.md` for the linked editorial checklist, before/after findings, layout changes, and browser checks. The final build passed with no Astro diagnostics. Desktop (1280 × 850) and mobile (390 × 844) checks showed no horizontal overflow; the terrain slider updated its readout. Current preview: `http://127.0.0.1:4330/friant-kern/`. The runtime asset base now supports the configured GitHub Pages subdirectory. Screenshots are in `previews/copy-review-*.png`.

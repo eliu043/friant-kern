@@ -8,13 +8,62 @@ const profileLine=terrainSection.samples.map((p,i)=>`${i?'L':'M'}${px(p.km).toFi
 const sectionStart=terrainSection.samples.reduce((best,p,i)=>Math.abs(p.longitude-terrainSection.canal_longitude)<Math.abs(terrainSection.samples[best].longitude-terrainSection.canal_longitude)?i:best,0);
 const verticalExaggeration=Math.round((174/3000)/(384/(terrainSection.length_km*1000)));
 const chapters = [
- {id:'line',label:'The route',title:'Water takes the long way south.',text:'The Friant–Kern Canal leaves Millerton Lake at Friant Dam and runs south along the eastern side of the San Joaquin Valley to the Kern River. Gravity moves the water through its main channel, so the slope of the ground is part of the machine.',source:'route',note:'The mapped centerline is a reference alignment, not an as-built survey of the repaired canal.'},
- {id:'terrain',label:'The terrain',title:'Along the edge of the valley.',text:'Cut a line west to east near Lindsay and it crosses the flat valley floor, then the canal, then ground rising to the east. The 3D view sets the route in that terrain. It shows the broad shape of the region, not the engineered grade inside the channel.',source:'terrain',note:'USGS terrain at approximately 200 m ground spacing. Relief exaggerated 2×; model extent outlined. Outside the extent is basemap context. This does not resolve canal bed slope.'},
- {id:'ground',label:'The ground',title:'Ground that will not hold still.',text:'Elevation shows the shape of the land. Displacement shows how that shape changed. This satellite-derived layer measures how far the ground moved up or down between June 2015 and January 2024. The darker the patch, the more the land along the canal has sunk.',source:'dwr',note:'This layer shows accumulated movement over one interval, not an annual rate. Blank areas have no data.'},
- {id:'measure',label:'The close-up',title:'The difference is local.',text:'Over the same period, one cell near Terra Bella sank more than two feet, while cells near Lindsay and Delano dropped a tenth of a foot or less. Three readings are enough to show how uneven the sinking is. They cannot tell us how the canal’s own lining or water surface changed.',source:'dwr',note:'Regional estimates at approximate locators; not canal-lining measurements or town averages. Two decimal places do not imply survey precision.'},
- {id:'capacity',label:'The bottleneck',title:'A bottleneck changes what can pass.',text:'Where a stretch of canal sinks, operators may have to cut flow to keep the water inside its banks. Friant Water Authority reports that the 10-mile stretch targeted in Phase 1 had lost more than 60% of its original capacity before the repair.',source:'repair',note:'A historical figure for the Phase 1 stretch, not a current loss across all 152 miles. Design limits, channel roughness, and other factors also affect capacity.'},
- {id:'repair',label:'The repair',title:'Rebuild the channel. Allow for movement.',text:'The fix was physical: a new concrete-lined channel built beside the old one. Phase 1 rebuilt the ten miles at the bottleneck and was finished in 2024, as part of a roughly 33-mile correction effort. Because the ground could keep sinking, the new channel was designed with room to spare.',source:'repair',note:'The displacement layer ends in January 2024, before completion of Phase 1. It is not a post-repair performance assessment.'},
- {id:'aquifer',label:'The longer story',title:'Water levels can recover. Lost storage may not.',text:'When groundwater falls to historic lows, layers of clay and silt can compact, squeezing out the pore space that once held water. USGS explains that much of this compaction is permanent: groundwater levels can rise again, but some of that storage may never return. Restoring the canal’s flow and protecting the aquifer are linked, but fixing one does not fix the other.',source:'usgs',note:'This is an established regional mechanism, not attribution to an individual well. The map measures ground movement, not aquifer storage loss.'}
+  {
+    "id": "line",
+    "label": "The route",
+    "title": "From Friant Dam to the Kern River",
+    "text": "The Friant–Kern Canal leaves Millerton Lake at Friant Dam and runs south along the eastern side of the San Joaquin Valley to the Kern River. Its main channel carries water by gravity. Uneven settling can alter the channel’s grade and restrict flow.",
+    "source": "route",
+    "note": "The centerline is a reference alignment. An as-built survey would be needed to locate the repaired channel precisely."
+  },
+  {
+    "id": "terrain",
+    "label": "The terrain",
+    "title": "A terrain section near Lindsay",
+    "text": "This west–east section crosses the valley floor and the canal’s reference alignment near Lindsay before rising into the foothills. The section and the 3D map use the same USGS elevation export.",
+    "source": "terrain",
+    "note": "The regional export has approximately 200 m ground spacing. It cannot resolve the canal bed or freeboard. The 3D model exaggerates relief 2×; its outlined extent separates terrain data from basemap context."
+  },
+  {
+    "id": "ground",
+    "label": "Ground movement",
+    "title": "Ground movement from 2015 to January 2024",
+    "text": "DWR / TRE ALTAMIRA estimates show how much ground height changed between 13 June 2015 and 1 January 2024. Darker colors mark greater lowering. Gaps in the raster remain blank.",
+    "source": "dwr",
+    "note": "Values are cumulative displacement in feet over this interval. The first color bin includes near-zero and positive values."
+  },
+  {
+    "id": "measure",
+    "label": "Three samples",
+    "title": "Sampled displacement near three towns",
+    "text": "The selected cell near Terra Bella shows greater lowering than the cells near Lindsay and Delano over the same interval. These are individual regional raster cells near the named towns. Canal-lining and water-surface measurements would be needed to establish changes within the channel.",
+    "source": "dwr",
+    "note": "The cells were selected to illustrate contrasting values. They are not a representative canal survey or town averages; the displayed decimals do not establish survey precision."
+  },
+  {
+    "id": "capacity",
+    "label": "Capacity loss",
+    "title": "Capacity loss in the Phase 1 reach",
+    "text": "Where a canal section sinks, operators may have to reduce flow to keep water within its banks. Friant Water Authority reports that the 10-mile section targeted in Phase 1 had lost more than 60% of its original capacity before repair.",
+    "source": "repair",
+    "note": "This historical figure applies to the Phase 1 section. Design limitations, channel roughness, and other factors also affect capacity."
+  },
+  {
+    "id": "repair",
+    "label": "The repair",
+    "title": "Phase 1 replaced ten miles of canal",
+    "text": "In 2024, Reclamation and its partners completed ten miles of new concrete-lined canal beside the existing channel. Phase 1 is part of an approximately 33-mile correction project.",
+    "source": "repair",
+    "note": "The displacement layer ends in January 2024, before Phase 1 was completed. It cannot assess the completed repair’s performance."
+  },
+  {
+    "id": "aquifer",
+    "label": "Aquifer storage",
+    "title": "Compaction can permanently reduce aquifer storage",
+    "text": "When groundwater levels fall to historic lows, layers of clay and silt can compact and lose the pore space that held water. USGS reports that much of this compaction is irreversible. Some storage space can remain lost even after groundwater levels recover.",
+    "source": "usgs",
+    "note": "This map contains no well-level pumping histories or measurements of aquifer storage loss."
+  }
 ];
 ---
 <!doctype html>
@@ -22,12 +71,12 @@ const chapters = [
 <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content="Follow the Friant–Kern Canal from terrain and sinking ground to the limits of repair."/><title>The ground beneath the canal</title></head>
 <body>
 <a class="skip" href="#chapters">Skip to story</a>
-<header><a class="brand" href="#top"><span class="brand-line" aria-hidden="true"></span> WATER / GROUND</a><a href="#sources">Sources ↗</a></header>
+<header><a class="brand" href="#top"><span class="brand-line" aria-hidden="true"></span> FRIANT–KERN</a><a href="#sources">Sources ↗</a></header>
 <main id="top">
 <section class="intro"><figure class="opening-photo"><img src="images/canal-tulare.jpg" width="400" height="300" alt="The Friant–Kern Canal beneath a road bridge in Tulare County"/><figcaption>Friant–Kern Canal, Tulare County<br/>Bureau of Reclamation · published 2023</figcaption></figure>
- <div class="kicker">A FIELD STORY FROM CALIFORNIA’S SAN JOAQUIN VALLEY</div>
- <h1>The ground<br/><span>beneath</span><br/>the <em>canal.</em></h1>
- <div class="intro-bottom"><p>A story about moving water<br/>on ground that keeps moving.</p><a href="#chapters" class="begin">Follow the water <span>↓</span></a></div>
+ <div class="kicker">FRIANT–KERN CANAL · SAN JOAQUIN VALLEY, CALIFORNIA</div>
+ <h1>The ground beneath<br/>the <em>canal.</em></h1>
+ <div class="intro-bottom"><p>How subsidence reduced the Friant–Kern Canal’s capacity and what its repair addresses.</p><a href="#chapters" class="begin">Read the story <span>↓</span></a></div>
  <div class="hero-facts" aria-label="The canal in context"><div><strong>152<span> miles</span></strong><p>from Friant Dam to the Kern River</p></div><div><strong>1<span> million acres</span></strong><p>of farmland supplied</p></div><div><strong>250,000<span>+</span></strong><p>people supplied along the system</p></div></div>
  <p class="hero-credit">System-wide figures reported by <a href="https://www.usbr.gov/newsroom/news-release/4884">Reclamation, June 2024 ↗</a></p>
 
@@ -48,7 +97,7 @@ const chapters = [
  <div class="kicker"><span class="station" aria-hidden="true"></span>{String(i+1).padStart(2,'0')} / {c.label}</div><h2>{c.title}</h2><p class="narrative">{c.text}</p>
  {c.id==='terrain' && <figure class="terrain-profile">
  <div class="profile-heading"><span>A — A′ / 36.2° N</span><span>West → East</span></div>
- <svg id="terrain-profile" viewBox="0 0 460 260" role="img" aria-label="Measured regional terrain section at 36.2 degrees north, with distance in kilometers and elevation in meters. The reference canal crossing is marked.">
+ <svg id="terrain-profile" viewBox="0 0 460 260" role="img" aria-label="Terrain section sampled from USGS elevation data at 36.2 degrees north. Axes show kilometers and meters; the reference canal crossing is marked.">
  {[0,1000,2000,3000].map(m=><g><line x1="48" x2="432" y1={py(m)} y2={py(m)} class="profile-grid"/><text x="39" y={py(m)+4} text-anchor="end">{m.toLocaleString('en-US')}</text></g>)}
  <text x="48" y="21" class="profile-axis-title">ELEVATION / m</text>
  <path d={`${profileLine} L432,212 L48,212 Z`} class="profile-fill"/><path d={profileLine} class="profile-line"/>
@@ -58,27 +107,25 @@ const chapters = [
  <circle id="profile-cursor" cx={px(terrainSection.samples[sectionStart].km)} cy={py(terrainSection.samples[sectionStart].elevation_m)} r="4"/>
  </svg>
  <label class="profile-control" for="section-position">Slide along the section <output id="section-readout"></output></label><input id="section-position" type="range" min="0" max="180" value={sectionStart} aria-label="Position along terrain section"/>
- <figcaption>The dashed line is the intersection with the mapped canal—not a bed elevation. Section heights exaggerated about {verticalExaggeration}×. Sampled from regional USGS terrain; source acquisition dates vary.</figcaption>
+ <figcaption>The dashed line marks the reference canal crossing. Section heights are exaggerated about {verticalExaggeration}×. Source acquisition dates vary.</figcaption>
  </figure>}
- {c.id==='ground' && <p class="section-bridge">But the ground did not sink evenly.</p>}
  {c.id==='measure' && <div class="sample-readings" aria-label="Cumulative displacement at three raster cells"><div><span>Near Lindsay</span><strong>−0.02 <small>ft</small></strong><i style="--length:0.9%"></i></div><div><span>Near Terra Bella</span><strong>−2.22 <small>ft</small></strong><i style="--length:100%"></i></div><div><span>Near Delano</span><strong>−0.12 <small>ft</small></strong><i style="--length:5.4%"></i></div><p>Lowering, June 2015–January 2024. Bar lengths compare these three estimates only.</p></div>}
  {c.id==='capacity' && <div class="metric"><strong>&gt;60<span>%</span></strong><p>of original capacity lost in the 10-mile<br/>Phase 1 stretch before repair</p></div>}
  {c.id==='repair' && <ol class="timeline"><li><strong>2020</strong><span>Reclamation signs the project Record of Decision.</span></li><li><strong>2022</strong><span>Construction begins in January.</span></li><li><strong>2024</strong><span>Completion of the 10-mile first phase celebrated in June.</span></li></ol>}
- {c.id==='repair' && <><figure class="repair-photo"><img src="images/canal-replacement.jpg" width="400" height="300" alt="The old canal on the left and construction of its replacement on the right"/><figcaption>Old channel, left; replacement under construction, right. <a href="https://www.usbr.gov/newsroom/news-release/4410?field_story=1">Reclamation, published January 2023 ↗</a></figcaption></figure><div class="design-allowance"><strong>5 <small>feet</small></strong><p>of future subsidence allowed for in the project design, as described in Reclamation’s 2023 construction account. This is a design provision—not measured movement or a forecast from this map.</p></div></>}
- {c.id==='aquifer' && <div class="closing-thought">Restoring the route for water is one task.<br/><em>Protecting the space that stores it is another.</em></div>}
+ {c.id==='repair' && <><figure class="repair-photo"><img src="images/canal-replacement.jpg" width="400" height="300" alt="The old canal on the left and construction of its replacement on the right"/><figcaption>Old channel, left; replacement under construction, right. <a href="https://www.usbr.gov/newsroom/news-release/4410?field_story=1">Reclamation, published January 2023 ↗</a></figcaption></figure><div class="design-allowance"><strong>5 <small>feet</small></strong><p>Allowance for future subsidence described in Reclamation’s 2023 construction account. This is a design provision; the map does not predict future movement.</p></div></>}
 
  <p class="caution">{c.note}</p><a class="source-link" href={`#source-${c.source}`}>Source &amp; context ↗</a>{c.id==='capacity' && <a class="continue" href="#repair">Continue to the repair ↓</a>}
  </div></section>)}</div>
 </div>
-<section class="evidence" id="sources"><details id="source-notes"><summary>Sources &amp; reading the layers <span>＋</span></summary><div class="sources">
+<section class="evidence" id="sources"><details id="source-notes"><summary>Sources and methods <span>＋</span></summary><div class="sources">
  <article id="source-route"><span>01 / THE CANAL</span><h3>A route through the valley</h3><p>Reclamation’s June 2024 account supplies the 152-mile length and system-wide farmland and population figures. The reference centerline comes from a public ArcGIS mirror of federal mapping compiled from 1:24,000 maps and orthophotos; it may predate repairs.</p><a href="https://www.usbr.gov/newsroom/news-release/4884">Reclamation, June 2024 ↗</a> · <a href="https://www.arcgis.com/home/item.html?id=6bfb1ecacc2f4a01927f8d9468e342e2">Alignment metadata ↗</a> · <a href="https://www.usbr.gov/mp/sccao/fkc-fr.html">Gravity-fed design ↗</a></article>
- <article id="source-terrain"><span>02 / REGIONAL TERRAIN</span><h3>Elevation is different from displacement</h3><p>USGS 3DEP bare-earth elevation, exported 13 November 2026 from a service incorporating data published through 26 October 2026. The export has 245 m Web Mercator cells—approximately 200 m on the ground at the section latitude. Source acquisition dates vary. The map uses 2× relief exaggeration; the section has its own labeled exaggeration. This regional surface cannot resolve the canal bed, freeboard, or hydraulic grade.</p><a href="https://www.usgs.gov/3d-elevation-program/about-3dep-products-services">USGS 3DEP ↗</a> · <a href="data/terrain-meta.json">Local terrain metadata ↓</a></article>
- <article id="source-census"><span>OPTIONAL / CITY CONTEXT</span><h3>Population, not service membership</h3><p>July 2025 incorporated-city estimates from the Census Bureau, joined by GEOID to 2020 Gazetteer reference points. All 28 matched cities whose reference points fall in the map’s regional window are included. Unincorporated communities and dispersed rural residents are absent. Circle area is proportional to population; these are neither city footprints nor an exposure analysis.</p><a href="https://www.census.gov/data/datasets/time-series/demo/popest/2020s-total-cities-and-towns.html">Census population estimates ↗</a> · <a href="https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.2020.html">Reference locations ↗</a> · <a href="data/communities.geojson" download>Local data ↓</a></article>
- <article id="source-dwr"><span>03 / THE MOVING GROUND</span><h3>A historical regional estimate</h3><p>DWR / TRE ALTAMIRA cumulative vertical displacement, 13 June 2015–1 January 2024. Observations are averaged over roughly 100 m areas and interpolated into rasters. The local overview is resampled using nearest neighbors. Blank cells remain transparent. Three selected cells illustrate variation; no canal slope or water flow is calculated from them.</p><a href="https://data.cnra.ca.gov/dataset/tre-altamira-insar-subsidence">Dataset &amp; accuracy reports ↗</a> · <a href="data/samples.geojson" download>Samples ↓</a></article>
+ <article id="source-terrain"><span>02 / REGIONAL TERRAIN</span><h3>USGS terrain export</h3><p>USGS 3DEP bare-earth elevation, exported 13 November 2026 from a service incorporating data published through 26 October 2026. The export has 245 m Web Mercator cells—approximately 200 m on the ground at the section latitude. Source acquisition dates vary. Relief exaggeration is 2× in the map and approximately 23× in the section. This regional surface cannot resolve the canal bed, freeboard, or hydraulic grade.</p><a href="https://www.usgs.gov/3d-elevation-program/about-3dep-products-services">USGS 3DEP ↗</a> · <a href="data/terrain-meta.json">Local terrain metadata ↓</a></article>
+ <article id="source-census"><span>OPTIONAL / CITY CONTEXT</span><h3>Incorporated-city population estimates</h3><p>July 2025 incorporated-city estimates from the Census Bureau, joined by GEOID to 2020 Gazetteer reference points. All 28 matched cities whose reference points fall in the map’s regional window are included. Unincorporated communities and dispersed rural residents are absent. Circle area is proportional to population; these are neither city footprints nor an exposure analysis.</p><a href="https://www.census.gov/data/datasets/time-series/demo/popest/2020s-total-cities-and-towns.html">Census population estimates ↗</a> · <a href="https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.2020.html">Reference locations ↗</a> · <a href="data/communities.geojson" download>Local data ↓</a></article>
+ <article id="source-dwr"><span>03 / THE MOVING GROUND</span><h3>Cumulative displacement, 2015–January 2024</h3><p>DWR / TRE ALTAMIRA cumulative vertical displacement, 13 June 2015–1 January 2024. Observations are averaged over roughly 100 m areas and interpolated into rasters. The local overview is resampled using nearest neighbors. Blank cells remain transparent. Three selected cells illustrate variation; no canal slope or water flow is calculated from them.</p><a href="https://data.cnra.ca.gov/dataset/tre-altamira-insar-subsidence">Dataset &amp; accuracy reports ↗</a> · <a href="data/samples.geojson" download>Samples ↓</a></article>
  <article id="source-repair"><span>04 / THE ENGINEERING RECORD</span><h3>A bottleneck and a phased repair</h3><p>Friant Water Authority reports that the 10-mile Phase 1 stretch had lost more than 60% of its original capacity. Reclamation documents the 2020 decision, January 2022 construction start, and June 2024 completion celebration within a broader 33-mile effort. No repair boundary or current flow measurement is inferred from this map.</p><a href="https://friantwater.org/fkc-mrccp">Friant Water Authority ↗</a> · <a href="https://www.usbr.gov/newsroom/news-release/4884">Completion account ↗</a> · <a href="https://www.usbr.gov/mp/sccao/general-project.html">Construction chronology ↗</a> · <a href="https://www.usbr.gov/mp/nepa/includes/documentShow.php?Doc_ID=46744">2020 EIS ↗</a></article>
- <article id="source-usgs"><span>05 / BELOW THE SURFACE</span><h3>Compaction can leave a lasting mark</h3><p>USGS explains the relationship between falling groundwater levels, fine-grained sediments, and compaction, including the potential permanent loss of aquifer storage. This mechanism helps explain the regional problem; it does not identify the pumping history responsible at any mapped location.</p><a href="https://www.usgs.gov/centers/land-subsidence-in-california/science/aquifer-compaction-due-groundwater-pumping">USGS explanation ↗</a></article>
+ <article id="source-usgs"><span>05 / BELOW THE SURFACE</span><h3>Aquifer-system compaction</h3><p>USGS explains the relationship between falling groundwater levels, fine-grained sediments, and compaction, including the potential permanent loss of aquifer storage. This mechanism helps explain the regional problem; it does not identify the pumping history responsible at any mapped location.</p><a href="https://www.usgs.gov/centers/land-subsidence-in-california/science/aquifer-compaction-due-groundwater-pumping">USGS explanation ↗</a></article>
 </div></details></section>
 </main>
-<footer><a class="brand" href="#top">WATER / GROUND ↑</a><p>Friant–Kern Canal · San Joaquin Valley, California<br/>Research and design with Codex assistance. Sources reviewed November 2026.</p></footer>
+<footer><a class="brand" href="#top">FRIANT–KERN ↑</a><p>Friant–Kern Canal · San Joaquin Valley, California<br/>Research and design with Codex assistance. Sources reviewed November 2026.</p></footer>
 <script>import '../scripts/story';</script>
 </body></html>
