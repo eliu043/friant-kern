@@ -31,3 +31,15 @@ Census population adds optional settlement context only. It does not establish w
 The 5 ft figure describes the construction design's provision for future subsidence. It is not observed movement, a forecast from the raster, or an aquifer-storage metric. It appears only with the repair.
 
 See TERRAIN_PROVENANCE.json and scripts/prepare_terrain.py for the retained elevation source and processing. See REVISION.md for the preceding revision's source checks; this document supersedes its section structure.
+
+## Verification record
+
+The final production build passed on 13 November 2026: 17 Astro files inspected, 0 errors, 0 warnings, 0 hints; six example YAML files validated; one static page generated.
+
+Verified the retained USGS TIFF hash against terrain metadata, finite positive elevation values, five transect samples against the original raster, 181 ordered section positions, and all 93 local 256×256 RGB terrain tiles. No raw terrain or displacement data was substituted with an illustration.
+
+Browser inspection covered all seven chapter roles, the opening typography, terrain rendering, the profile slider and linked map cursor, flattening to the displacement view, local sample presentation, the full-screen bottleneck, onward repair navigation, the distinct storage conclusion, and opening the appropriate source note. Desktop 1280×850 and mobile 390×844 overflow checks passed. Profile controls returned the expected readouts at checked positions. No missing images or console errors were reported at the checked production views. Compact mobile attribution remains expandable. Reduced-motion handling was reviewed in code; it was not browser-emulated in this pass.
+
+The bounded USGS export is a regional terrain model. Its edge is delineated; outside that footprint is basemap context. Larger optional exports timed out and were not used. Terrain exaggeration does not convert the model into a canal survey. A source-linked engineering profile would be needed for bed slope and freeboard.
+
+Saved current production previews: terrain-desktop.png, terrain-mobile.png, editorial-metric.png, and editorial-repair.png under previews/. Earlier revised-*.png files describe the preceding design. The preview was returned to the opening, temporary browser sizing reset, and the built local preview remains at http://127.0.0.1:4330/.

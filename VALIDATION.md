@@ -15,3 +15,7 @@ No claim of exhaustive accessibility testing, survey validation, classifier retr
 ## November 2026 narrative revision
 
 See `research/REVISION.md` for the seven-chapter revision, new Census layer, source checks, production browser checks, and remaining verification limits. Original checks above describe the initial prototype. Revised screenshots are in `previews/revised-*.png`.
+
+## Terrain and editorial structure pass
+
+Current validation and section-by-section rationale are in `research/SECTION_REVIEW.md`. USGS source/processing metadata is in `research/TERRAIN_PROVENANCE.json`. The conceptual section and main population chapter have been removed; the design allowance now appears with repair.
