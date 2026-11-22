@@ -1,0 +1,327 @@
+{
+ "currentVersion": 11.3,
+ "cimVersion": "3.3.0",
+ "id": 0,
+ "name": "i16_Census_BlockGroup_DisadvantagedCommunities_2023",
+ "type": "Feature Layer",
+ "description": "The IRWM web based DAC mapping tool uses this GIS layer. Created by joining ACS 2019-2023 5 year estimates to the Census 2020 Block Group feature class. The TIGER/Line Files are shapefiles and related database files (.dbf) that are an extract of selected geographic and cartographic information from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). The MTDB represents a seamless national file with no overlaps or gaps between parts, however, each TIGER/Line File is designed to stand alone as an independent data set, or they can be combined to cover the entire nation. Block Groups (BGs) are defined before tabulation block delineation and numbering, but are clusters of blocks within the same census tract that have the same first digit of their 4-digit census block number from the same decennial census. For example, Census 2020 tabulation blocks 3001, 3002, 3003,.., 3999 within Census 2020 tract 1210.02 are also within BG 3 within that census tract. Census 2020 BGs generally contained between 600 and 3,000 people, with an optimum size of 1,500 people. Most BGs were delineated by local participants in the Census Bureau's Participant Statistical Areas Program (PSAP). The Census Bureau delineated BGs only where the PSAP participant declined to delineate BGs or where the Census Bureau could not identify any local PSAP participant. A BG usually covers a contiguous area. Each census tract contains at least one BG, and BGs are uniquely numbered within census tract. Within the standard census geographic hierarchy, BGs never cross county or census tract boundaries, but may cross the boundaries of other geographic entities like county subdivisions, places, urban areas, voting districts, congressional districts, and American Indian / Alaska Native / Native Hawaiian areas. BGs have a valid code range of 0 through 9. BGs coded 0 were intended to only include water area, no land area, and they are generally in territorial seas, coastal water, and Great Lakes water areas. For Census 2020, rather than extending a census tract boundary into the Great Lakes or out to the U.S. nautical three-mile limit, the Census Bureau delineated some census tract boundaries along the shoreline or just offshore. The Census Bureau assigned a default census tract number of 0 and BG of 0 to these offshore, water-only areas not included in regularly numbered census tract areas.",
+ "geometryType": "esriGeometryPolygon",
+ "sourceSpatialReference": {
+  "wkid": 102100,
+  "latestWkid": 3857,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -20037700,
+  "falseY": -30241100,
+  "xyUnits": 10000,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "copyrightText": "U.S. Census Bureau",
+ "parentLayer": null,
+ "subLayers": [],
+ "minScale": 0,
+ "maxScale": 0,
+ "referenceScale": 0.0,
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "symbol": {
+    "type": "esriSFS",
+    "style": "esriSFSSolid",
+    "color": [
+     240,
+     204,
+     230,
+     255
+    ],
+    "outline": {
+     "type": "esriSLS",
+     "style": "esriSLSSolid",
+     "color": [
+      0,
+      0,
+      0,
+      255
+     ],
+     "width": 0.4
+    }
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": -1.3857274729899999E7,
+  "ymin": 3832930.6171000004,
+  "xmax": -1.27050295695E7,
+  "ymax": 5162403.843199998,
+  "spatialReference": {
+   "wkid": 102100,
+   "latestWkid": 3857,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -20037700,
+   "falseY": -30241100,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "displayField": "STATEFP20",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "STATEFP20",
+   "type": "esriFieldTypeString",
+   "alias": "STATEFP20",
+   "length": 2,
+   "domain": null
+  },
+  {
+   "name": "COUNTYFP20",
+   "type": "esriFieldTypeString",
+   "alias": "COUNTYFP20",
+   "length": 3,
+   "domain": null
+  },
+  {
+   "name": "TRACTCE20",
+   "type": "esriFieldTypeString",
+   "alias": "TRACTCE20",
+   "length": 6,
+   "domain": null
+  },
+  {
+   "name": "BLKGRPCE20",
+   "type": "esriFieldTypeString",
+   "alias": "BLKGRPCE20",
+   "length": 1,
+   "domain": null
+  },
+  {
+   "name": "GEOID20",
+   "type": "esriFieldTypeString",
+   "alias": "GEOID20",
+   "length": 12,
+   "domain": null
+  },
+  {
+   "name": "ALAND20",
+   "type": "esriFieldTypeDouble",
+   "alias": "ALAND20",
+   "domain": null
+  },
+  {
+   "name": "AWATER20",
+   "type": "esriFieldTypeDouble",
+   "alias": "AWATER20",
+   "domain": null
+  },
+  {
+   "name": "INTPTLAT20",
+   "type": "esriFieldTypeString",
+   "alias": "INTPTLAT20",
+   "length": 11,
+   "domain": null
+  },
+  {
+   "name": "INTPTLON20",
+   "type": "esriFieldTypeString",
+   "alias": "INTPTLON20",
+   "length": 12,
+   "domain": null
+  },
+  {
+   "name": "Pop23",
+   "type": "esriFieldTypeDouble",
+   "alias": "Pop23",
+   "domain": null
+  },
+  {
+   "name": "HH23",
+   "type": "esriFieldTypeDouble",
+   "alias": "HH23",
+   "domain": null
+  },
+  {
+   "name": "DAC23",
+   "type": "esriFieldTypeString",
+   "alias": "DAC23",
+   "length": 50,
+   "domain": null
+  },
+  {
+   "name": "Source",
+   "type": "esriFieldTypeString",
+   "alias": "Source",
+   "length": 255,
+   "domain": null
+  },
+  {
+   "name": "Comments",
+   "type": "esriFieldTypeString",
+   "alias": "Comments",
+   "length": 255,
+   "domain": null
+  },
+  {
+   "name": "Date_Record_Last_Edited",
+   "type": "esriFieldTypeDate",
+   "alias": "Date_Record_Last_Edited",
+   "length": 8,
+   "domain": null
+  },
+  {
+   "name": "Record_Last_Edited_By",
+   "type": "esriFieldTypeString",
+   "alias": "Record_Last_Edited_By",
+   "length": 255,
+   "domain": null
+  },
+  {
+   "name": "Date_Data_Refers_To",
+   "type": "esriFieldTypeString",
+   "alias": "Date_Data_Refers_To",
+   "length": 255,
+   "domain": null
+  },
+  {
+   "name": "MHI23",
+   "type": "esriFieldTypeDouble",
+   "alias": "MHI23",
+   "domain": null
+  },
+  {
+   "name": "Shape",
+   "type": "esriFieldTypeGeometry",
+   "alias": "Shape",
+   "domain": null
+  },
+  {
+   "name": "Shape.STArea()",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape.STArea()",
+   "domain": null
+  },
+  {
+   "name": "Shape.STLength()",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape.STLength()",
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "Shape",
+  "type": "esriFieldTypeGeometry",
+  "alias": "Shape"
+ },
+ "indexes": [
+  {
+   "name": "R2565_pk",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "S2029_idx",
+   "fields": "Shape",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": true,
+ "canScaleSymbols": false,
+ "hasLabels": false,
+ "capabilities": "Query,Map,Data",
+ "maxRecordCount": 2000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsAdvancedQueryRelated": true,
+  "supportsQueryRelatedPagination": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": true,
+  "supportsCurrentUserQueries": true
+ },
+ "supportsDatumTransformation": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsAsync": false,
+  "supportsPercentileAnalytic": true
+ },
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeAreaFieldName": "Shape.STArea()",
+  "shapeLengthFieldName": "Shape.STLength()",
+  "units": "esriMeters",
+  "mapUnits": {"uwkid": 9001}
+ },
+ "hasMetadata": true,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": true,
+ "serviceItemId": "2cf318d3193a4a5d838a9433a3351e1a"
+}

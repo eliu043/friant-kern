@@ -25,7 +25,7 @@ let lastMobile=window.innerWidth<=760;
 let showPeople=false,showMovement=false,showTerrain=false;
 let popup:maplibregl.Popup | undefined;
 try {
- const map = new maplibregl.Map({container:'map',center:views[0].center as [number,number],zoom:views[0].zoom,attributionControl:{compact:true},pitch:0,bearing:0,style:{version:8,sources:{context:{type:'raster',tiles:['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],tileSize:256,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}},layers:[{id:'paper',type:'background',paint:{'background-color':'#e2e8da'}},{id:'context',type:'raster',source:'context',paint:{'raster-opacity':.26,'raster-saturation':-.9}}]}});
+ const map = new maplibregl.Map({container:'map',center:views[0].center as [number,number],zoom:views[0].zoom,attributionControl:{compact:true},pitch:0,bearing:0,style:{version:8,sources:{context:{type:'raster',tiles:['https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}'],maxzoom:16,tileSize:256,attribution:'Basemap: Esri, HERE, Garmin, OpenStreetMap contributors'}},layers:[{id:'paper',type:'background',paint:{'background-color':'#090d10'}},{id:'context',type:'raster',source:'context',paint:{'raster-opacity':.48,'raster-saturation':-.9}}]}});
  map.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
  map.addControl(new maplibregl.ScaleControl({unit:'metric'}),'bottom-left');
  map.scrollZoom.disable();map.dragPan.disable();map.dragRotate.disable();map.doubleClickZoom.disable();map.touchZoomRotate.disable();map.keyboard.disable();
@@ -65,28 +65,28 @@ try {
  map.on('load',()=>{
   map.addSource('terrain-dem',{type:'raster-dem',tiles:[`${location.origin}${baseUrl}data/terrain/{z}/{x}/{y}.png`],tileSize:256,minzoom:6,maxzoom:10,bounds:terrainMeta.bounds as [number,number,number,number],encoding:'terrarium',attribution:'Terrain: USGS 3DEP'});
   map.addSource('terrain-color',{type:'image',url:`${baseUrl}data/elevation-tint.png`,coordinates:terrainMeta.coordinates as [[number,number],[number,number],[number,number],[number,number]]});
-  map.addLayer({id:'terrain-tint',type:'raster',source:'terrain-color',paint:{'raster-opacity':.72,'raster-fade-duration':0}},'context');
-  map.addLayer({id:'terrain-shade',type:'hillshade',source:'terrain-dem',paint:{'hillshade-exaggeration':.42,'hillshade-shadow-color':'#465847','hillshade-highlight-color':'#fffbef','hillshade-accent-color':'#69735e'}},'context');
+  map.addLayer({id:'terrain-tint',type:'raster',source:'terrain-color',paint:{'raster-opacity':.30,'raster-fade-duration':0}},'context');
+  map.addLayer({id:'terrain-shade',type:'hillshade',source:'terrain-dem',paint:{'hillshade-exaggeration':.42,'hillshade-shadow-color':'#030507','hillshade-highlight-color':'#b0c8bd','hillshade-accent-color':'#354b50'}},'context');
   map.addSource('displacement',{type:'image',url:`${baseUrl}data/displacement.png`,coordinates:meta.coordinates as [[number,number],[number,number],[number,number],[number,number]]});
   map.addLayer({id:'displacement',type:'raster',source:'displacement',paint:{'raster-opacity':0,'raster-opacity-transition':{duration:reduced?0:700,delay:0},'raster-fade-duration':0,'raster-resampling':'nearest'}});
   map.addSource('communities',{type:'geojson',data:JSON.parse(communities),attribution:'Population: US Census Bureau'});
-  map.addLayer({id:'communities',type:'circle',source:'communities',layout:{visibility:'none'},paint:{'circle-radius':['*',['sqrt',['get','population']],window.innerWidth<=760?.05059644:.06324555],'circle-color':'#326d8a','circle-opacity':.23,'circle-stroke-color':'#326d8a','circle-stroke-width':1.2}});
+  map.addLayer({id:'communities',type:'circle',source:'communities',layout:{visibility:'none'},paint:{'circle-radius':['*',['sqrt',['get','population']],window.innerWidth<=760?.05059644:.06324555],'circle-color':'#7896ff','circle-opacity':.23,'circle-stroke-color':'#7896ff','circle-stroke-width':1.2}});
   map.addSource('canal',{type:'geojson',data:JSON.parse(canal),attribution:'Canal: federal / ArcGIS mirror · Ground: DWR / TRE ALTAMIRA'});
-  map.addLayer({id:'canal-halo',type:'line',source:'canal',paint:{'line-color':'#f6f4e9','line-width':5}});
-  map.addLayer({id:'canal',type:'line',source:'canal',paint:{'line-color':'#244d43','line-width':2.2}});
+  map.addLayer({id:'canal-halo',type:'line',source:'canal',paint:{'line-color':'#0a0d0f','line-width':5}});
+  map.addLayer({id:'canal',type:'line',source:'canal',paint:{'line-color':'#ff8a3d','line-width':2.2}});
   const [west,south,east,north]=terrainMeta.bounds;
   map.addSource('terrain-footprint',{type:'geojson',data:{type:'Feature',properties:{},geometry:{type:'LineString',coordinates:[[west,south],[east,south],[east,north],[west,north],[west,south]]}}});
-  map.addLayer({id:'terrain-extent',type:'line',source:'terrain-footprint',layout:{visibility:'none'},paint:{'line-color':'#69735e','line-width':1,'line-dasharray':[2,3]}});
+  map.addLayer({id:'terrain-extent',type:'line',source:'terrain-footprint',layout:{visibility:'none'},paint:{'line-color':'#71817d','line-width':1,'line-dasharray':[2,3]}});
   map.addSource('section-transect',{type:'geojson',data:{type:'Feature',properties:{},geometry:{type:'LineString',coordinates:[[-120.15,36.2],[-118.45,36.2]]}}});
-  map.addLayer({id:'section-line',type:'line',source:'section-transect',layout:{visibility:'none'},paint:{'line-color':'#9a482e','line-width':2,'line-dasharray':[3,3]}});
+  map.addLayer({id:'section-line',type:'line',source:'section-transect',layout:{visibility:'none'},paint:{'line-color':'#ff8a3d','line-width':2,'line-dasharray':[3,3]}});
   const initialSection=section.samples[Number(($('section-position') as HTMLInputElement).value)];
   map.addSource('section-point',{type:'geojson',data:{type:'Feature',properties:{},geometry:{type:'Point',coordinates:[initialSection.longitude,36.2]}}});
-  map.addLayer({id:'section-cursor',type:'circle',source:'section-point',layout:{visibility:'none'},paint:{'circle-radius':5,'circle-color':'#f4f1e9','circle-stroke-color':'#9a482e','circle-stroke-width':2}});
+  map.addLayer({id:'section-cursor',type:'circle',source:'section-point',layout:{visibility:'none'},paint:{'circle-radius':5,'circle-color':'#0b1013','circle-stroke-color':'#ff8a3d','circle-stroke-width':2}});
   map.addSource('samples',{type:'geojson',data:JSON.parse(samples)});
-  map.addLayer({id:'samples',type:'circle',source:'samples',layout:{visibility:'none'},paint:{'circle-radius':7,'circle-color':'#f8f4e8','circle-stroke-color':'#243d33','circle-stroke-width':2}});
+  map.addLayer({id:'samples',type:'circle',source:'samples',layout:{visibility:'none'},paint:{'circle-radius':7,'circle-color':'#f3f5ed','circle-stroke-color':'#7394ff','circle-stroke-width':2}});
   // Local DOM locators remain legible even if external map tiles are unavailable.
   for(const [name,lng,lat] of [['Friant Dam',-119.705,36.999],['Lindsay',-119.088,36.203],['Terra Bella',-119.045,35.962],['Delano',-119.248,35.768],['Bakersfield',-119.019,35.374]] as [string,number,number][]){
-   const el=document.createElement('span');el.textContent=name;el.style.cssText='font:10px Mona,Arial;color:#203e32;background:#f4f1e9c9;padding:2px 4px;pointer-events:none';
+   const el=document.createElement('span');el.textContent=name;el.className='story-map-label';
    new maplibregl.Marker({element:el,anchor:'left',offset:[8,0]}).setLngLat([lng,lat]).addTo(map);
   }
   map.on('click','samples',e=>{const f=e.features?.[0];if(!f)return;const p=f.properties!;const content=document.createElement('div');const strong=document.createElement('strong');strong.textContent=p.name;const text=document.createElement('p');text.textContent=`${p.feet??'No data'} ft · 13 Jun 2015–1 Jan 2024. ${p.note}`;content.append(strong,text);popup?.remove();popup=new maplibregl.Popup().setLngLat((f.geometry as {type:'Point';coordinates:number[]}).coordinates as [number,number]).setDOMContent(content).addTo(map);});

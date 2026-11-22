@@ -23,3 +23,11 @@ Current validation and section-by-section rationale are in `research/SECTION_REV
 ## Copy and design review
 
 See `research/COPY_DESIGN_REVIEW.md` for the linked editorial checklist, before/after findings, layout changes, and browser checks. The final build passed with no Astro diagnostics. Desktop (1280 × 850) and mobile (390 × 844) checks showed no horizontal overflow; the terrain slider updated its readout. Current preview: `http://127.0.0.1:4330/friant-kern/`. The runtime asset base now supports the configured GitHub Pages subdirectory. Screenshots are in `previews/copy-review-*.png`.
+
+## Closing exploration map
+
+See `research/CLOSING_MAP_REVIEW.md` and `research/EXPLORER_PROVENANCE.json`. The new map includes an approximate Phase 1 locator, 329 DWR Census block groups, 39 city/CDP reference points, optional displacement, and aerial inspection. No affected-population total or as-built alignment is inferred. Build passed with no Astro diagnostics; desktop and mobile interactions, map source links, and viewport overflow were checked. Screenshots are in `previews/closing-map-*.png`.
+
+## Atlas visual identity
+
+See `research/VISUAL_IDENTITY.md` for the SPUN reference, type and color roles, basemap and font provenance, and visual checks. Replaced the accumulated style overrides with a consistent dark atlas identity. Build passed; checked 1440 × 1000 and 390 × 844 with no horizontal overflow, font loading, mobile terrain interaction, community selection, and final-map controls. The displacement bins and source data are unchanged. Current identity screenshots are in `previews/atlas-identity-*.png`.

@@ -1,0 +1,36 @@
+{
+  "retrieved": "2026-11-13",
+  "block_groups": {
+    "item": "https://www.arcgis.com/home/item.html?id=71c73d8379a346c7b8711e50875fb15f",
+    "service": "https://utility.arcgis.com/usrsvcs/servers/71c73d8379a346c7b8711e50875fb15f/rest/services/Society/i16_Census_BlockGroup_DisadvantagedCommunities_2023/MapServer",
+    "selection": "Geometry intersects regional envelope [-119.65, 35.65, -118.75, 36.35]",
+    "count": 329,
+    "vintage": "ACS 2019\u20132023 estimates joined by DWR to 2020 block-group geography",
+    "classification": "DAC23 supplied by DWR: Y, N, Data not available; no classification recomputed",
+    "simplification": "Douglas\u2013Peucker, 0.00004 degree tolerance; display only",
+    "limitations": "No ACS margins of error in this extract. Income designation does not measure canal dependence, water quality, dry wells, individual household income, or project effects."
+  },
+  "places": {
+    "source": "2020 Census Gazetteer, retained national place file",
+    "count": 39,
+    "selection": "Reference point within the regional envelope",
+    "limitations": "Includes cities and CDPs, not all settlements; points are not footprints or water-service areas.",
+    "block_group_join": "Gazetteer reference point containment in original unsimplified DWR polygons, excluding holes. The selected point inherits block-group context, never a whole-town estimate or service assignment."
+  },
+  "repair": {
+    "source": "https://static1.squarespace.com/static/58c2eccc15d5db46200ea426/t/62d6ee396cf9330b42cf7772/1658252859680/FWA_eNews_07-2022.pdf",
+    "page": 3,
+    "method": "Clip older reference centerline to geocoded Avenue 136 / Road 208 and Avenue 64 / Road 192 latitudes. Crossing responses retained. Broad corridor locator only; no eastward offset or new as-built line fabricated.",
+    "bounds_latitudes": [
+      35.906339909838,
+      36.036768986861
+    ]
+  },
+  "sha256": {
+    "dwr-layer.json": "442fe22df12e7be3cbffb9fd084b540e9206888c6ed82c8a63fa82b8b516e63d",
+    "dwr-block-groups.geojson": "81f1ee8390c55253da8379f9390e8557e01d809f44384bed76c9723a610cb7a9",
+    "dwr-item.json": "7b330d676f9a42a7329d2a5abd3707bd00087d6482ef95d6d8ef4820ca95bdef",
+    "north-crossing.json": "1074ad6e814c2f31328f4e67eba586fc46f0e0bba5acad91961223d8b9dbf2ba",
+    "south-crossing.json": "8b4bfe1e491798bce134adee6849e91ff3d7a694f50ef916e85ae6cb90cd3d2c"
+  }
+}

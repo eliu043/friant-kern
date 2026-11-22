@@ -12,5 +12,13 @@
     "source_page": "https://www.usbr.gov/newsroom/news-release/4410?field_story=1",
     "image_url": "https://www.usbr.gov/newsroom/newsroom/newsroom/inline-images/FKC%202.jpg",
     "credit": "Bureau of Reclamation, construction account published 23 January 2023; capture date unspecified"
+  },
+  {
+    "file": "public/images/completed-phase-one.jpg",
+    "sha256": "902d79edd5593747f89391719d600645bac86507e58ab96e7f93ab400e7f796e",
+    "source_page": "https://friantwater.org/fkc-mrccp",
+    "image_url": "https://images.squarespace-cdn.com/content/v1/58c2eccc15d5db46200ea426/1780606146579-WQGK9SBBBR14HWTYT39E/Friant%2BWater%2BAuthority%2B-%2B2026-06-04T134312.539.jpg?format=1000w",
+    "credit": "Friant Water Authority; aerial imagery courtesy of Stantec. Page identifies completed Phase 1. Capture date unspecified.",
+    "retrieved": "2026-11-13"
   }
 ]
